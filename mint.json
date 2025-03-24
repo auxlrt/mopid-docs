@@ -36,11 +36,6 @@
       "name": "Website",
       "icon": "browser",
       "url": "https://mopid.me"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://blog.mopid.me"
     }
   ],
   "navigation": [
