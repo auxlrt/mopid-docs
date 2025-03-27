@@ -5,58 +5,195 @@ description: "Learn how to send assessment tests to candidates directly from the
 
 ## Initiating Tests
 
-This feature allows you to send assessment tests to candidates directly from the ATS, streamlining the evaluation process and ensuring consistent assessment across all candidates.
+This feature allows you to send assessment tests to candidates directly from the ATS, streamlining the evaluation process and ensuring consistent assessment across all candidates. You can either select from pre-created assessments or leverage AI to generate customized assessments on the fly.
 
 ## Benefits
 
 - Standardize your evaluation process for all candidates
-- Save time by automating test distribution
+- Save time by automating test distribution and creation
 - Easily track which candidates have completed assessments
+- Generate tailored assessments instantly with AI
+- Preview the candidate experience before sending
+- Share assessment previews with colleagues for approval
 
 ## How to Initiate a Test
 
 <Steps>
-  <Step title="Locate the Candidate">
-    Find the candidate in either the List View or Candidate Profile View.
+  <Step title="Select the Candidate">
+    Find and select the candidate by clicking on the checkbox next to their name in the List View.
+  </Step>
+  <Step title="Access the Action Center">
+    Once the candidate is selected, the "Initiate Test" button becomes active in the Action Center on the right-hand side of the screen.
   </Step>
   <Step title="Click Initiate Test">
-    Click the "Initiate Test" button next to the candidate's name.
+    Click the "Initiate Test" button to launch the assessment wizard in a pop-up screen.
   </Step>
-  <Step title="Select Test">
-    Choose the appropriate test (e.g., "React Developer Technical Round") from the available options.
+  <Step title="Choose Assessment Method">
+    Select one of two options:
+    - **Select from an existing assessment** - Choose from previously created assessments
+    - **Create with AI** - Generate a new assessment using AI
   </Step>
-  <Step title="Confirm and Send">
-    Review the test details and click "Confirm" to send the test to the candidate.
+  <Step title="Configure and Review">
+    Depending on your choice in the previous step:
+    - For **existing assessments**: Select the desired assessment, review questions, and proceed
+    - For **AI-generated assessments**: Define topics, difficulty level, test duration, and question types
+  </Step>
+  <Step title="Send the Assessment">
+    After reviewing all details, click "Send Test" to dispatch the assessment to the candidate.
   </Step>
 </Steps>
 
 <Info>
-  The system logs details such as the test ID, name, and initiation time for each test sent.
+  Upon sending an assessment, the candidate is automatically moved to the corresponding assessment stage in the pipeline.
 </Info>
 
-## Types of Tests
+## Creating an Assessment with AI
 
-Our ATS supports various types of assessments:
+If you choose to create a new assessment with AI, the platform guides you through a step-by-step wizard to customize your assessment:
 
-| Test Type | Description |
+### Step 1: Initiate the AI Assessment Creation
+
+After selecting "Create with AI" in the assessment wizard and clicking "Next Step," you'll be presented with the AI assessment creation interface.
+
+### Step 2: Configure Assessment Parameters
+
+#### Define Topics
+- The platform pre-populates skill sets relevant to the job requisition
+- You can select from these suggested topics or add custom ones
+- For custom topics, simply type in the skills you want to assess (e.g., "strategy")
+- You can use natural language to describe what you want to assess, such as "I want to gauge the candidate on specific aspects"
+
+#### Set Difficulty Level
+- Choose from three options:
+  - Basic: For entry-level assessments
+  - Intermediate: For mid-level positions
+  - Advanced: For senior or specialized roles
+- This setting determines the complexity of questions generated
+
+#### Define Test Duration
+- Select from predefined options:
+  - 30 minutes
+  - 60 minutes
+  - 90 minutes
+- The platform will adjust question length and quantity based on your selection
+
+#### Select Language
+- Currently set to English by default
+- This defines the language in which questions will be generated
+
+#### Customize Question Types
+- Click on "Add Question Type" to specify the format and quantity
+- For each question type, set the desired quantity:
+  - Text-based questions: Free-form responses
+  - Multiple-choice questions: Select from options
+  - Audio questions: Verbal responses
+  - Coding questions: Technical challenges
+- Example configuration:
+  - 5 text-based questions
+  - 2 multiple-choice questions
+  - 1 audio question
+
+### Step 3: Generate Questions
+
+After configuring your parameters, click the "Generate" button to create your assessment. The AI will process your requirements and create a tailored set of questions based on your specifications.
+
+<Info>
+  The AI generation process takes only a few seconds to create a complete assessment with all specified question types.
+</Info>
+
+### Step 4: Review and Customize Generated Questions
+
+Once generated, you can:
+- Review each question individually
+- Delete unwanted questions by clicking the delete icon
+- Duplicate questions by clicking the duplicate icon and making modifications
+- Manually add additional questions by clicking "Add a Question"
+- Regenerate the entire assessment by clicking "Regenerate" if needed
+
+### Step 5: Name Your Assessment
+
+Before proceeding, you must provide a name for your assessment:
+- Enter a descriptive name in the "Enter Assessment Name" field (e.g., "Preliminary Assessment Round")
+- The name you provide will appear in the email sent to candidates, so choose a professional and clear title
+
+<Warning>
+  Once an assessment has been sent to even a single candidate, it becomes uneditable. You can, however, always create a new assessment with full editing capabilities.
+</Warning>
+
+## Preview and Sharing Features
+
+Before sending an assessment, you can use two powerful preview options:
+
+### Candidate Experience Preview
+
+This feature lets you see exactly how the assessment will appear to candidates:
+
+1. Click the "Preview" button in the review screen
+2. A new tab opens with a mock version of the assessment
+3. You can walk through the entire candidate experience including:
+   - The instructions screen
+   - Camera preview for proctoring
+   - All questions as they will appear to candidates
+4. This preview is for demonstration purposes only – no data is saved
+
+### Shareable Assessment Preview
+
+To get feedback from colleagues before sending:
+
+1. Click the "Share Preview" button
+2. A shareable link is automatically copied to your clipboard
+3. Share this link with team members who need to review the assessment
+4. Recipients can view the complete assessment without affecting the original
+
+<Tip>
+  The preview feature allows you to experience the assessment exactly as candidates will, though no data is saved during preview mode.
+</Tip>
+
+## Types of Questions
+
+Mopid supports various question types to comprehensively evaluate candidates:
+
+| Question Type | Description |
 |-----------|-------------|
-| Technical Skills | Evaluate coding abilities, problem-solving skills, etc. |
-| Personality Assessments | Assess cultural fit and work style |
-| Language Proficiency | Measure language skills for relevant positions |
-| Cognitive Ability | Test problem-solving and critical thinking skills |
+| Text-based | Free-form written responses to assess detailed knowledge |
+| Multiple Choice | Standardized options to evaluate specific knowledge areas |
+| Audio | Verbal responses to assess communication skills |
+| Coding | Technical challenges to evaluate programming abilities |
 
 ## Tracking Test Progress
 
 After initiating a test:
 
-1. The candidate's status in the pipeline will update to "Assessment In Progress"
-2. You'll receive a notification when the candidate completes the test
-3. Test results will be automatically added to the candidate's profile once available
+1. The candidate's status in the pipeline automatically updates to the assessment stage
+2. You can filter candidates by test status (e.g., "Test Completed") to track progress
+3. You'll receive notifications when candidates complete their assessments
+4. Test results and detailed responses are automatically added to the candidate's profile
+
+## Reviewing Test Results
+
+Once a candidate completes an assessment:
+
+1. Navigate to the candidate's profile
+2. Click on the "Test Questions" tab to view their responses 
+3. Review AI-generated scoring and reasoning for each response
+4. Access recorded responses for audio questions
+
+## Reinitiate Tests if Needed
+
+If a candidate was unable to complete the assessment or needs to retake it:
+
+1. Navigate to the candidate's profile
+2. Click on "More Options"
+3. Select "Reinitiate Test"
+4. Confirm to resend the assessment invitation
 
 <Warning>
-  Ensure the candidate's email address is correct before initiating a test. Incorrect email addresses may result in candidates not receiving their assessments.
+  Ensure the candidate's email address and contact information are correct before initiating a test. Incorrect details may result in candidates not receiving their assessments.
 </Warning>
 
 ## Next Steps
 
-After initiating tests, you may need to [edit candidate details](/modules/ats-platform/candidate-list-view/editing-details) to update their information based on test results or other new information.
+After initiating tests, you may want to:
+- [Filter candidates](/modules/ats-platform/candidate-list-view/filtering-candidates) based on test completion status
+- [Review candidate responses](/modules/ats-platform/candidate-profile-view/reviewing-assessments) in detail
+- [Move candidates](/modules/ats-platform/candidate-list-view/moving-candidates) to the next stage in the pipeline
