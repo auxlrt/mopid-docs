@@ -84,6 +84,17 @@
         "modules/ats-platform/candidate-profile-view/screening-questions",
         "modules/ats-platform/candidate-profile-view/test-questions"
       ]
+    },
+    {
+      "group": "Job Management",
+      "pages": [
+        "modules/ats-platform/job-management/overview",
+        "modules/ats-platform/job-management/application-details",
+        "modules/ats-platform/job-management/job-description",
+        "modules/ats-platform/job-management/screening-questions",
+        "modules/ats-platform/job-management/hiring-pipeline",
+        "modules/ats-platform/job-management/options"
+      ]
     }
   ],
   "footerSocials": {
